@@ -9,7 +9,7 @@ export class PokemonService {
   constructor(private http: HttpClient) { }
 
   searchProd(query: string) {
-    const url = `https://pokeapi.co/api/v2/type=${query}`;
+    const url = `https://pokeapi.co/api/v2/type/${query}`;
     let obsProd = this.http.get(url);
     return obsProd;
   }
